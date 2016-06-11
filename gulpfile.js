@@ -27,7 +27,6 @@ gulp.task('styles',function () {
        nested,
        short,
        autoprefixer({browsers:['last 3 versions']}),
-       cssnano
    ];
     return gulp.src('dev/styles/style.css',{base: 'dev'})
         .pipe(gulpIf(isDevelopment,sourcemaps.init()))
@@ -73,7 +72,7 @@ gulp.task('watch', function() {
     gulp.watch(['dev/js/**/*.js','main.js'], ['javascripts']);
 
     // Отслеживание файлов assets
-    gulp.watch('assets/**/*', ['assets']);
+    gulp.watch('dev/assets/**', ['assets']);
 
     // Отслеживание всех файлов в папке dev/, перезагрузка при изменении
     gulp.watch("dev/*.html");

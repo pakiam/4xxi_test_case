@@ -3,14 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="libs/foundation-flex/foundation.min.css">
     <link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-<div class="example">
+<header class="header">
+    <div class="wrapper">
+        <div class="header__logo">
+            <img src="i/logo.png" alt="">
+        </div>
 
+        <div class="header__title">
+            <p><a href="#">Sign up for FREE</a> — START PUBLISHING IN MINUTES</p>
+        </div>
+
+
+        <div class="header__sign">
+            <a href="#">Log In</a>
+        </div>
+    </div>
+</header>
+
+<div class="profile">
+    <div class="wrapper">
+        <div class="profile__info">
+            <div class="user-photo">
+                <img src="i/userphoto.png" alt="Konstantin Vladimirskiy Photo">
+            </div>
+            <div class="user-name">
+                <p>Konstantin Vladimirskiy</p>
+            </div>
+        </div>
+
+        <div class="profile__social">
+            <div class="social-icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-vk"></i>
+                <i class="fa fa-linkedin"></i>
+                <input onClick="this.setSelectionRange(0, this.value.length)" class="social-link" type="text"
+                       value="http://cll.io/a6lnu" readonly>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="timestamp">
+    <div class="wrapper">
+        <div class="post-release">
+            <h1>Post-release checklist 2015.02.26</h1>
+        </div>
+        <div class="button-add-centrallo">
+            <button class="btn">Add to my Centrallo</button>
+        </div>
+    </div>
+</div>
+
+<div class="check-list">
+    <div class="wrapper">
+        <div class="check-list__items">
+            <div class="check-list__item">
+                <input type="checkbox"><span>Referral Accepted and Invited invitations not sorted by A-Z</span>
+            </div>
+            <div class="check-list__item">
+                <input type="checkbox"><span>Inbox shows me 242 items - that includes Done items; Only show me active</span>
+            </div>
+            <div class="check-list__item">
+                <input type="checkbox"><span>Inbox defaults to show done items - it should not</span>
+            </div>
+            <div class="check-list__item">
+                <input type="checkbox"><span>Lists default to Show Done - they should not</span>
+            </div>
+            <div class="check-list__item">
+                <input type="checkbox"><span>Recent view should sort by Created and show no Done items</span>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="libs/jQuery/jquery-2.1.4.min.js"></script>
 <script src="js/main.js"></script>

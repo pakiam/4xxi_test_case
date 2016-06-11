@@ -9,6 +9,7 @@ var imagemin = require('gulp-imagemin');
 var concat=require('gulp-concat');
 var sourcemaps=require('gulp-sourcemaps');
 var gulpIf=require('gulp-if');
+var newer=require('gulp-newer');
 
 var nested=require('postcss-nested');
 var short=require('postcss-short');
@@ -26,7 +27,7 @@ gulp.task('styles',function () {
        simplevars({silent:true}),
        nested,
        short,
-       autoprefixer({browsers:['last 3 versions']}),
+       autoprefixer({browsers:['last 3 versions']})
    ];
     return gulp.src('dev/styles/style.css',{base: 'dev'})
         .pipe(gulpIf(isDevelopment,sourcemaps.init()))
@@ -53,6 +54,7 @@ gulp.task('images', function() {
 
 gulp.task('assets',function () {
    return gulp.src('dev/assets/**')
+       .pipe(newer('dev'))
        .pipe(gulp.dest('public'));
 });
 

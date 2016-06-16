@@ -1,0 +1,26 @@
+
+$base-color: #2d3033;
+$headerLinkAndButton: #37b7ec;
+$font-color: #494949;
+$brand-color: #e84545;
+$accent-color: #2b2e4a;
+$nav-color: rgba(255,255,255, .75);
+
+$font: 'Helvetica Neue', sans-serif;
+$font-secondary: "Open Sans", sans-serif;
+
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+/*1rem=10px if body {font-size: 62.5%}, so rem=px/10 => px=rem*10*/
+$font-size: 1.6rem;
+$h1-font-size: 2rem;
+$h2-font-size: 1.6rem;
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.4rem;
+$h5-font-size: 1.4rem;
+$nav-font-size: 1.3rem;
+

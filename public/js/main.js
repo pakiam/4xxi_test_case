@@ -1,13 +1,14 @@
 $(document).ready(function () {
     var added = false; // is element added
+    var $downloadBanner=$('.download-banner');
     function showBanner() {
         if (!added && $(window).width() <= 768) {
             console.log('added');
-            $('.download-banner').slideDown();
+            $downloadBanner.slideDown();
             added=true;
         }else if(added && $(window).width() > 768){
             console.log('removed');
-            $('.download-banner').slideUp();
+            $downloadBanner.slideUp();
             added=false;
         }
     }
@@ -15,8 +16,8 @@ $(document).ready(function () {
 
     //close banner button
     $('.fa-close').on('click',function () {
-       $('.download-banner').slideUp();
-        
+        $downloadBanner.slideUp();
+
     });
     $(window).resize(showBanner);
 

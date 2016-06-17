@@ -99,6 +99,10 @@ h5 {
     clear: both;
 }
 
+.no-padding{
+    padding: 0;
+}
+
 img{
     max-width: 100%;
     overflow: hidden;
@@ -122,29 +126,13 @@ body{
 }
 
 .header{
-    height: 60px;
     background-color: #3c434a;
-    display: table;
     width: 100%;
-}
-
-.header__logo{
-	display: table-cell;
-	width: 19%;
-	height: 40px;
-	margin:0 auto;
-	vertical-align: middle;
+    padding: 1.4rem 0;
 }
 
 .header__logo img{
-	vertical-align: baseline;
-	width: 135px;
-	height: 32px;
-}
-
-.header__title{
-	display: table-cell;
-	width: 38%;
+	max-width: 50%;
 }
 
 .header__title a{
@@ -159,17 +147,12 @@ body{
 
 .header__title p{
 	font-size:1.3rem;
-	line-height: 16px;
 	font-weight: 400;
-	vertical-align: middle;
 	color: #a3adb3;
 	letter-spacing:.3px;
-	margin: 0;
 }
 
 .header__sign{
-	display: table-cell;
-	width: 3%;
 	text-align: right;
 }
 
@@ -178,9 +161,7 @@ body{
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 1.3rem;
-	line-height: 13px;
 	font-weight: 400;
-	line-height: 60px;
 }
 
 .header__sign a:hover{
@@ -188,11 +169,7 @@ body{
 }
 
 .profile{
-    padding: 2rem 0 1rem;
-}
-
-.profile__info{
-    display: table-cell;
+    margin: 2rem 0 1rem;
 }
 
 .profile__info .user-photo{
@@ -210,12 +187,10 @@ body{
 }
 
 .profile__info .user-name p{
-	font-size: 18px;
+	font-size: 1.8rem;
 }
 
 .profile__social{
-    display: table-cell;
-    vertical-align: baseline;
     text-align: right;
 }
 
@@ -239,12 +214,7 @@ body{
 }
 
 .timestamp{
-    padding: 2rem 0;
-}
-
-.timestamp .post-release{
-	display: table-cell;
-	vertical-align: middle;
+    margin: 2rem auto;
 }
 
 .timestamp .post-release h1{
@@ -253,7 +223,6 @@ body{
 }
 
 .timestamp .button-add-centrallo{
-	display: table-cell;
 	text-align: right;
 }
 
@@ -361,15 +330,11 @@ body{
 
 .check-list__items .check-list__item{
 	padding: .2rem 0;
-	display: table;
-	width: 100%;
 }
 
 .check-list__items .check-list__item p{
 	color: #494949;
 	font-size: 1.6rem;
-	line-height: 2.6rem;
-	margin-bottom: 1rem;
 }
 
 .check-list__items .check-list__item--calendar{
@@ -395,19 +360,8 @@ body{
 	border-top: 1px solid #bdbdbd;
 }
 
-.check-list__items .check-list__item--map .map-container{
-	display: table-cell;
-	width: 36%;
-	vertical-align: top;
-}
-
 .check-list__items .check-list__item--map .map-container img{
-	width: 90%;
-}
-
-.check-list__items .check-list__item--map .map-info{
-	display: table-cell;
-	vertical-align: top;
+	max-width: 90%;
 }
 
 .check-list__items .check-list__item--map .map-info .place-name{
@@ -498,11 +452,10 @@ body{
 }
 
 .check-list__items .item-icon{
-	display: table-cell;
+	display: inline-block;
 	color: #a6aeb6;
 	font-size: 1.6rem;
 	text-align: left;
-	width: 3%;
 }
 
 .check-list__items .item-icon_active{
@@ -510,7 +463,7 @@ body{
 }
 
 .check-list__items .item-title{
-	display: table-cell;
+	display: inline-block;
 	margin-left: 1rem;
 	text-align: left;
 }
@@ -522,9 +475,9 @@ body{
 }
 
 .check-list__items .item-count, .check-list__items .item-date{
-	display: table-cell;
+	display: inline-block;
 	text-align: right;
-	width: 10%;
+	float: right;
 }
 
 .check-list__items .item-count p,.check-list__items .item-date p{
@@ -634,22 +587,17 @@ body{
     width: 100%;
     padding: 1rem 0;
     background-color: #37b7ec;
-    display: table;
 
 }
 
 .download-banner__logo{
-	display: table-cell;
 	width: 33px;
 	height: 33px;
 	vertical-align: middle;
 }
 
 .download-banner__title{
-	display: table-cell;
 	text-align: left;
-	vertical-align: middle;
-	padding-left: 1rem;
 }
 
 .download-banner__title h1{
@@ -663,24 +611,57 @@ body{
 	color: #ffffff;
 }
 
-.download-banner__button{
-	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
-}
-
 .download-banner__button button{
 	padding: .8rem 4rem;
 }
 
 .download-banner__close{
-	display: table-cell;
-	vertical-align: middle;
-	margin-left: 4rem;
 	text-align: right;
 	font-size: 2rem;
 	color: #ffffff;
 	cursor: pointer;
+}
+
+.row-xs-flex-center {
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-align-items:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+
+@media ( min-width:768px ) {
+    .row-sm-flex-center {
+        display:-webkit-flex;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-align-items:center;
+            -ms-flex-align:center;
+                align-items:center;
+    }
+}
+
+@media ( min-width: 992px ) {
+    .row-md-flex-center {
+        display:-webkit-flex;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-align-items:center;
+            -ms-flex-align:center;
+                align-items:center;
+    }
+}
+
+@media ( min-width: 1200px ) {
+    .row-lg-flex-center {
+        display:-webkit-flex;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-align-items:center;
+            -ms-flex-align:center;
+                align-items:center;
+    }
 }
 
 /*========= MEDIA styles =========*/
@@ -694,37 +675,13 @@ body{
 /* Medium Devices, Desktops */
 
 @media only screen and (max-width: 992px) {
-    .header__logo{
-		display: table-cell;
-		width: 13%;
-		height: 40px;
-	}
-    .header__title{
-		display: table-cell;
-		width: 30%;
-	}
-    .header__sign{
-		display: table-cell;
-		width: 3%;
-	}
+
 }
 
 /* Small Devices, Tablets */
 
 @media only screen and (max-width: 768px) {
-    .header__logo{
-		display: table-cell;
-		width: 13%;
-		height: 40px;
-	}
-    .header__title{
-		display: table-cell;
-		width: 30%;
-	}
-    .header__sign{
-		display: table-cell;
-		width: 3%;
-	}
+
 }
 
 /* Extra Small Devices, Phones */
@@ -744,9 +701,7 @@ body{
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) {
-    .wrapper{
-        width: 92.5%;
-    }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -758,9 +713,7 @@ body{
 /* Small Devices, Tablets */
 
 @media only screen and (min-width: 768px) {
-    .wrapper{
-        width: 93.75%;
-    }
+
 }
 
 /* Medium Devices, Desktops */
@@ -772,7 +725,5 @@ body{
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
-    .wrapper{
-        width: 80%;
-    }
+
 }

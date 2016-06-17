@@ -5,26 +5,40 @@
     <title>Insert title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="libs/bootstrap-grid-3.3.1.min.css">
     <link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 <!--DOWNLOAD BANNER START-->
 <div class="download-banner">
-    <div class="wrapper">
-        <div class="download-banner__logo">
-            <img src="i/logo-mini.png" alt="">
-        </div>
+    <div class="container">
+        <div class="row row-md-flex-center">
+            <div class="col-md-1">
+                <div class="download-banner__logo">
+                    <img src="i/logo-mini.png" alt="">
+                </div>
+            </div>
 
-        <div class="download-banner__title">
-            <h1>Centrallo</h1>
-            <p>Download it for free on the App Store</p>
-        </div>
-        <div class="download-banner__button">
-            <button class="btn btn_white">Download</button>
-        </div>
-        <div class="download-banner__close">
-            <i class="fa fa-close"></i>
+            <div class="col-md-8">
+                <div class="download-banner__title">
+                    <h1>Centrallo</h1>
+                    <p class="hidden-xs">Download it for free on the App Store</p>
+                    <p class="hidden-sm">Free on the Google Play</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-10">
+                    <div class="download-banner__button">
+                        <button class="btn btn_white">Download</button>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="download-banner__close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -32,18 +46,27 @@
 
 <!--HEADER SECTION START-->
 <header class="header">
-    <div class="wrapper">
-        <div class="header__logo">
-            <img src="i/logo.png" alt="">
-        </div>
+    <div class="container">
+        <div class="row row-md-flex-center">
 
-        <div class="header__title">
-            <p><a href="#">Sign up for FREE</a> — START PUBLISHING IN MINUTES</p>
-        </div>
+            <div class="col-md-3">
+                <div class="header__logo">
+                    <img src="i/logo.png" alt="">
+                </div>
+            </div>
 
+            <div class="col-md-8">
+                <div class="header__title">
+                    <p class="hidden-xs"><a href="#">Sign up for FREE</a> — START PUBLISHING IN MINUTES</p>
+                    <p class="hidden-sm hidden-md hidden-lg"><a href="#">Sign up</a></p>
+                </div>
+            </div>
 
-        <div class="header__sign">
-            <a href="#">Log In</a>
+            <div class="col-md-1">
+                <div class="header__sign">
+                    <a href="#">Log In</a>
+                </div>
+            </div>
         </div>
     </div>
 </header>
@@ -51,24 +74,30 @@
 
 <!--PROFILE SECTION START-->
 <div class="profile">
-    <div class="wrapper">
-        <div class="profile__info">
-            <div class="user-photo">
-                <img src="i/userphoto.png" alt="Konstantin Vladimirskiy Photo">
+    <div class="container">
+        <div class="row row-md-flex-center">
+            <div class="col-md-6">
+                <div class="profile__info">
+                    <div class="user-photo">
+                        <img src="i/userphoto.png" alt="Konstantin Vladimirskiy Photo">
+                    </div>
+                    <div class="user-name">
+                        <p>Konstantin Vladimirskiy</p>
+                    </div>
+                </div>
             </div>
-            <div class="user-name">
-                <p>Konstantin Vladimirskiy</p>
-            </div>
-        </div>
 
-        <div class="profile__social">
-            <div class="social-icons">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-vk"></i>
-                <i class="fa fa-linkedin"></i>
-                <input onClick="this.setSelectionRange(0, this.value.length)" class="social-link" type="text"
-                       value="http://cll.io/a6lnu" readonly>
+            <div class="col-md-6">
+                <div class="profile__social">
+                    <div class="social-icons">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-vk"></i>
+                        <i class="fa fa-linkedin"></i>
+                        <input onClick="this.setSelectionRange(0, this.value.length)" class="social-link" type="text"
+                               value="http://cll.io/a6lnu" readonly>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -77,12 +106,18 @@
 
 <!--TIMESTAMP LINE START-->
 <div class="timestamp">
-    <div class="wrapper">
-        <div class="post-release">
-            <h1>Post-release checklist 2015.02.26</h1>
-        </div>
-        <div class="button-add-centrallo">
-            <button class="btn btn_blue">Add to my Centrallo</button>
+    <div class="container">
+        <div class="row row-md-flex-center">
+            <div class="col-md-6">
+                <div class="post-release">
+                    <h1>Post-release checklist 2015.02.26</h1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="button-add-centrallo">
+                    <button class="btn btn_blue">Add to my Centrallo</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -90,49 +125,52 @@
 
 <!--CHECK LIST START-->
 <div class="check-list">
-    <div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--check list item start-->
+                <div class="check-list__items">
+                    <div class="priority">
+                        <img src="i/priority.png" alt="">
+                    </div>
+                    <!--check list item end-->
 
-        <!--check list item start-->
-        <div class="check-list__items">
-            <div class="priority">
-                <img src="i/priority.png" alt="">
-            </div>
-            <!--check list item end-->
+                    <!--check list item start-->
+                    <div class="check-list__item">
+                        <input type="checkbox"><span>Referral Accepted and Invited invitations not sorted by A-Z</span>
+                    </div>
+                    <!--check list item end-->
 
-            <!--check list item start-->
-            <div class="check-list__item">
-                <input type="checkbox"><span>Referral Accepted and Invited invitations not sorted by A-Z</span>
-            </div>
-            <!--check list item end-->
+                    <!--check list item start-->
+                    <div class="check-list__item">
+                        <input type="checkbox"><span>Inbox shows me 242 items - that includes Done items; Only show me active</span>
+                    </div>
+                    <!--check list item end-->
 
-            <!--check list item start-->
-            <div class="check-list__item">
-                <input type="checkbox"><span>Inbox shows me 242 items - that includes Done items; Only show me active</span>
-            </div>
-            <!--check list item end-->
+                    <!--check list item start-->
+                    <div class="check-list__item">
+                        <input type="checkbox"><span>Inbox defaults to show done items - it should not</span>
+                    </div>
+                    <!--check list item end-->
 
-            <!--check list item start-->
-            <div class="check-list__item">
-                <input type="checkbox"><span>Inbox defaults to show done items - it should not</span>
-            </div>
-            <!--check list item end-->
+                    <!--check list item start-->
+                    <div class="check-list__item">
+                        <input type="checkbox"><span>Lists default to Show Done - they should not</span>
+                    </div>
+                    <!--check list item end-->
 
-            <!--check list item start-->
-            <div class="check-list__item">
-                <input type="checkbox"><span>Lists default to Show Done - they should not</span>
-            </div>
-            <!--check list item end-->
-
-            <!--check list item start-->
-            <div class="check-list__item">
-                <input type="checkbox"><span>Recent view should sort by Created and show no Done items</span>
-            </div>
-            <!--check list item end-->
-            <div class="bottom-info">
-                <div class="bottom-info__post-time"><span>2h ago</span></div>
-                <div class="bottom-info__post-links">
-                    <i class="fa fa-share-alt"></i>
-                    <i class="fa fa-link"></i>
+                    <!--check list item start-->
+                    <div class="check-list__item">
+                        <input type="checkbox"><span>Recent view should sort by Created and show no Done items</span>
+                    </div>
+                    <!--check list item end-->
+                    <div class="bottom-info">
+                        <div class="bottom-info__post-time"><span>2h ago</span></div>
+                        <div class="bottom-info__post-links">
+                            <i class="fa fa-share-alt"></i>
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,40 +180,44 @@
 
 <!--LISTS SECTION START-->
 <div class="check-list check-list--lists">
-    <div class="wrapper">
-        <div class="check-list__items">
-            <!--list item start-->
-            <div class="check-list__item">
-                <div class="item-icon item-icon_active"><i class="fa fa-list-ul"></i></div>
-                <div class="item-title"><p>Children</p></div>
-                <div class="item-count"><p>12 items</p></div>
-                <div class="item-date"><p>7h ago</p></div>
-            </div>
-            <!--list item end-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="check-list__items">
+                    <!--list item start-->
+                    <div class="check-list__item">
+                        <div class="item-icon item-icon_active"><i class="fa fa-list-ul"></i></div>
+                        <div class="item-title"><p>Children</p></div>
+                        <div class="item-count"><p>12 items</p></div>
+                        <div class="item-date"><p>7h ago</p></div>
+                    </div>
+                    <!--list item end-->
 
-            <!--list item start-->
-            <div class="check-list__item">
-                <div class="item-icon"><i class="fa fa-list-ul"></i></div>
-                <div class="item-title"><p>The longest title in the world</p></div>
-                <div class="item-count"><p>3 items</p></div>
-                <div class="item-date"><p>Mar 13</p></div>
-            </div>
-            <!--list item end-->
+                    <!--list item start-->
+                    <div class="check-list__item">
+                        <div class="item-icon"><i class="fa fa-list-ul"></i></div>
+                        <div class="item-title"><p>The longest title in the world</p></div>
+                        <div class="item-count"><p>3 items</p></div>
+                        <div class="item-date"><p>Mar 13</p></div>
+                    </div>
+                    <!--list item end-->
 
-            <!--list item start-->
-            <div class="check-list__item">
-                <div class="item-icon"><i class="fa fa-list-ul"></i></div>
-                <div class="item-title"><p>The longest title in the world</p></div>
-                <div class="item-count"><p>3 items</p></div>
-                <div class="item-date"><p>Mar 13</p></div>
-            </div>
-            <!--list item end-->
+                    <!--list item start-->
+                    <div class="check-list__item">
+                        <div class="item-icon"><i class="fa fa-list-ul"></i></div>
+                        <div class="item-title"><p>The longest title in the world</p></div>
+                        <div class="item-count"><p>3 items</p></div>
+                        <div class="item-date"><p>Mar 13</p></div>
+                    </div>
+                    <!--list item end-->
 
-            <div class="bottom-info">
-                <div class="bottom-info__post-time"><span>2h ago</span></div>
-                <div class="bottom-info__post-links">
-                    <i class="fa fa-share-alt"></i>
-                    <i class="fa fa-link"></i>
+                    <div class="bottom-info">
+                        <div class="bottom-info__post-time"><span>2h ago</span></div>
+                        <div class="bottom-info__post-links">
+                            <i class="fa fa-share-alt"></i>
+                            <i class="fa fa-link"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,12 +263,17 @@
     <div class="wrapper">
         <div class="check-list__items">
             <div class="check-list__item">
-                <p>The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who
+                <p>The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher
+                    Nolan, who
                     co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer.
-                    Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film
-                    trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises
-                    the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred
-                    Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces
+                    Featuring the DC Comics character Batman, the film is the final installment in Nolan's
+                    Batman film
+                    trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale
+                    reprises
+                    the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as
+                    Alfred
+                    Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film
+                    introduces
                     Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a
                     revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of
                     retirement and become Batman again.</p>

@@ -8,6 +8,11 @@
     display: table;
     clear: both;
 }
+
+.no-padding{
+    padding: 0;
+}
+
 img{
     max-width: 100%;
     overflow: hidden;
@@ -27,24 +32,15 @@ body{
     margin: 0 auto;
 }
 .header{
-    height: 60px;
     background-color: #3c434a;
-    display: table;
     width: 100%;
+    padding: 1.4rem 0;
     &__logo{
-        display: table-cell;
-        size: 19% 40px;
-        margin:0 auto;
-        vertical-align: middle;
         img{
-         vertical-align: baseline;
-            width: 135px;
-            height: 32px;
+            max-width: 50%;
         }
     }
     &__title{
-     display: table-cell;
-     width: 38%;
         a{
             color: $headerLinkAndButton;
             text-transform: uppercase;
@@ -55,26 +51,19 @@ body{
         }
         p{
             font-size:1.3rem;
-            line-height: 16px;
             font-weight: 400;
-            vertical-align: middle;
             color: #a3adb3;
             letter-spacing:.3px;
-            margin: 0;
         }
     }
     &__sign{
-     display: table-cell;
-     width: 3%;
      text-align: right;
         a{
          color: #fff;
          text-decoration: none;
          text-transform: uppercase;
          font-size: 1.3rem;
-         line-height: 13px;
          font-weight: 400;
-         line-height: 60px;
             &:hover{
                 color: #a3adb3;
             }
@@ -82,10 +71,9 @@ body{
      }
 }
 .profile{
-    padding: 2rem 0 1rem;
+    margin: 2rem 0 1rem;
 }
 .profile__info{
-    display: table-cell;
     .user-photo{
         display: inline-block;
         img {
@@ -97,13 +85,11 @@ body{
         vertical-align: middle;
         margin-left: 1rem;
         p{
-        font-size: 18px;
+        font-size: 1.8rem;
         }
     }
 }
 .profile__social{
-    display: table-cell;
-    vertical-align: baseline;
     text-align: right;
     .fa{
         font-size: 1.6rem;
@@ -123,17 +109,14 @@ body{
 }
 
 .timestamp{
-    padding: 2rem 0;
+    margin: 2rem auto;
     .post-release{
-        display: table-cell;
-        vertical-align: middle;
         h1{
             font-weight: 500;
             color: #2c2f31;
         }
     }
     .button-add-centrallo{
-        display: table-cell;
         text-align: right;
     }
 }
@@ -228,13 +211,9 @@ body{
     }
     .check-list__item{
         padding: .2rem 0;
-        display: table;
-        width: 100%;
         p{
             color: #494949;
             font-size: 1.6rem;
-            line-height: 2.6rem;
-            margin-bottom: 1rem;
         }
         &--calendar{
              padding: 2rem 0 0 0;
@@ -255,16 +234,11 @@ body{
              padding: 2rem 0;
              border-top: 1px solid #bdbdbd;
             .map-container{
-                display: table-cell;
-                width: 36%;
-                vertical-align: top;
                 img{
-                    width: 90%;
+                    max-width: 90%;
                 }
             }
             .map-info{
-                display: table-cell;
-                vertical-align: top;
                 .place-name{
                     color: #383838;
                     font-size: 1.6rem;
@@ -340,17 +314,16 @@ body{
         }
     }
 .item-icon{
-    display: table-cell;
+    display: inline-block;
     color: #a6aeb6;
     font-size: 1.6rem;
     text-align: left;
-    width: 3%;
 &_active{
      color: #ed1e23;
  }
 }
 .item-title{
-    display: table-cell;
+    display: inline-block;
     margin-left: 1rem;
     text-align: left;
 p{
@@ -360,9 +333,9 @@ p{
 }
 }
 .item-count, .item-date{
-    display: table-cell;
+    display: inline-block;
     text-align: right;
-    width: 10%;
+    float: right;
 p{
     color: #858585;
 }
@@ -461,17 +434,12 @@ p{
     size: 100% *;
     padding: 1rem 0;
     background-color: #37b7ec;
-    display: table;
     &__logo{
-         display: table-cell;
          size: 33px;
          vertical-align: middle;
     }
     &__title{
-         display: table-cell;
          text-align: left;
-         vertical-align: middle;
-         padding-left: 1rem;
         h1{
             font-size: 1.4rem;
             font-weight: bold;
@@ -483,17 +451,11 @@ p{
         }
     }
     &__button{
-        display: table-cell;
-        vertical-align: middle;
-         text-align: right;
         button{
          padding: .8rem 4rem;
      }
     }
     &__close{
-        display: table-cell;
-        vertical-align: middle;
-        margin-left: 4rem;
         text-align: right;
         font-size: 2rem;
         color: #ffffff;
@@ -501,6 +463,32 @@ p{
     }
 
 }
+
+
+.row-xs-flex-center {
+    display:flex;
+    align-items:center;
+}
+@media ( min-width:768px ) {
+    .row-sm-flex-center {
+        display:flex;
+        align-items:center;
+    }
+}
+@media ( min-width: 992px ) {
+    .row-md-flex-center {
+        display:flex;
+        align-items:center;
+    }
+}
+@media ( min-width: 1200px ) {
+    .row-lg-flex-center {
+        display:flex;
+        align-items:center;
+    }
+}
+
+
 /*========= MEDIA styles =========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -509,38 +497,12 @@ p{
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-    .header{
-        &__logo{
-             display: table-cell;
-             size: 13% 40px;
-         }
-        &__title{
-             display: table-cell;
-             width: 30%;
-         }
-        &__sign{
-             display: table-cell;
-             width: 3%;
-         }
-    }
+
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-    .header{
-        &__logo{
-            display: table-cell;
-            size: 13% 40px;
-        }
-        &__title{
-            display: table-cell;
-            width: 30%;
-        }
-        &__sign{
-            display: table-cell;
-            width: 3%;
-        }
-    }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -557,9 +519,7 @@ p{
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) {
-    .wrapper{
-        width: 92.5%;
-    }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -569,9 +529,7 @@ p{
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
-    .wrapper{
-        width: 93.75%;
-    }
+
 }
 
 /* Medium Devices, Desktops */
@@ -581,7 +539,5 @@ p{
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
-    .wrapper{
-        width: 80%;
-    }
+
 }

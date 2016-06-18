@@ -27,10 +27,6 @@ body{
     background-image: url('../i/bg.jpg');
     min-width: 320px;
 }
-.wrapper{
-    display: table;
-    margin: 0 auto;
-}
 .header{
     background-color: #3c434a;
     width: 100%;
@@ -45,6 +41,7 @@ body{
             color: $headerLinkAndButton;
             text-transform: uppercase;
             font-weight: 500;
+            text-decoration: underline;
             &:hover{
             text-decoration: none;
             }
@@ -234,11 +231,15 @@ body{
              padding: 2rem 0;
              border-top: 1px solid #bdbdbd;
             .map-container{
+                width: 50%;
+                float: left;
                 img{
                     max-width: 90%;
                 }
             }
             .map-info{
+                width: 50%;
+                float: right;
                 .place-name{
                     color: #383838;
                     font-size: 1.6rem;
@@ -326,32 +327,33 @@ body{
     display: inline-block;
     margin-left: 1rem;
     text-align: left;
-p{
-    color: #333;
-    font-weight: 500;
-    font-size: 1.6rem;
-}
+    p{
+        color: #333;
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
 }
 .item-count, .item-date{
     display: inline-block;
     text-align: right;
     float: right;
-p{
-    color: #858585;
-}
-}
+        p{
+            color: #858585;
+        }
+    }
 }
 .check-list--lists{
     .check-list__items{
         .check-list__item{
+        padding-bottom: 2rem;
         &:not(:first-child){
             border-top: 1px solid #bdbdbd;
-            padding-top: 2rem;
+             padding-top: 2rem;
         }
         }
     }
 }
-.check-list--photos{
+.check-list--photos, .check-list--event{
     .video-image{
         size: 100%;
         background-position: 50% center;
@@ -379,9 +381,17 @@ p{
     }
     .check-list__items{
         .check-list__item{
+            p{
+                color: #494949;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2.6rem;
+                margin-bottom: 1rem;
+            }
             &--inline{
                 padding-right: .6rem;
-                width: auto;
+                max-width: 33%;
+                height: 14rem;
                 display: inline-block;
                 position: relative;
                 margin: 0 0 2rem 0;
@@ -393,10 +403,8 @@ p{
 .footer{
     padding: 2rem 0;
     background-color: #3c434a;
-    display: table;
     width: 100%;
     &__copyright{
-    display: table-cell;
         p{
             color: #979ea4;
             font-size: 1.2rem;
@@ -405,10 +413,8 @@ p{
         }
     }
     &__menu{
-        display: table-cell;
     }
     &__socials{
-        display: table-cell;
         i{
             color: #979ea4;
             font-size: 2rem;
@@ -502,7 +508,114 @@ p{
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-
+    .check-list__items{
+    .priority{
+        position: absolute 0 0 * *;
+    }
+    .check-list__item{
+        padding: .2rem 0;
+    p{
+        color: #494949;
+        font-size: 1.6rem;
+    }
+&--calendar{
+     padding: 2rem 0 0 0;
+     border-top: 1px solid #bdbdbd;
+    p {
+        color: #858585;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-left: .8rem;
+        display: inline-block;
+    }
+    i{
+        font-size: 1.3rem;
+        color: #858585;
+    }
+}
+&--map{
+     padding: 2rem 0;
+     border-top: 1px solid #bdbdbd;
+.map-container{
+    width: 100%;
+    float: left;
+img{
+    max-width: 100%;
+}
+}
+.map-info{
+    width: 100%;
+    float: right;
+}
+}
+&--files{
+     padding: 2rem 0 0 0;
+     border-top: 1px solid #bdbdbd;
+.file{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    }
+}
+input[type="checkbox"]{
+    padding-left: .5rem;
+    cursor: pointer;
+    color: #fff;
+    size: 12px;
+    visibility: hidden;
+&:after{
+     content: '';
+     border: 2px solid #b8b8b8;
+     border-radius: 2px;
+     background-color: #fff;
+     display: inline-block;
+     visibility: visible;
+     size: 100%;
+ }
+&:checked:after{
+     background-color: #3b99fc;
+     border: 2px solid #3b99fc;
+     color: #fff;
+     font-size: 1.2rem;
+     font-family: FontAwesome;
+     content: "\f00c";
+     vertical-align: middle;
+     text-align: center;
+     padding: 0;
+ }
+}
+input[type="checkbox"]+span{
+    cursor: pointer;
+}
+}
+.item-icon{
+    display: inline-block;
+    color: #a6aeb6;
+    font-size: 1.6rem;
+    text-align: left;
+&_active{
+     color: #ed1e23;
+ }
+}
+.item-title{
+    display: inline-block;
+    margin-left: 1rem;
+    text-align: left;
+p{
+    color: #333;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+}
+.item-count, .item-date{
+    display: inline-block;
+    text-align: right;
+    float: right;
+p{
+    color: #858585;
+}
+}
+}
 }
 
 /* Extra Small Devices, Phones */

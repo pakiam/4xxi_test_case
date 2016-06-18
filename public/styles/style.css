@@ -120,11 +120,6 @@ body{
     min-width: 320px;
 }
 
-.wrapper{
-    display: table;
-    margin: 0 auto;
-}
-
 .header{
     background-color: #3c434a;
     width: 100%;
@@ -139,6 +134,7 @@ body{
 	color: #37b7ec;
 	text-transform: uppercase;
 	font-weight: 500;
+	text-decoration: underline;
 }
 
 .header__title a:hover{
@@ -360,8 +356,18 @@ body{
 	border-top: 1px solid #bdbdbd;
 }
 
+.check-list__items .check-list__item--map .map-container{
+	width: 50%;
+	float: left;
+}
+
 .check-list__items .check-list__item--map .map-container img{
 	max-width: 90%;
+}
+
+.check-list__items .check-list__item--map .map-info{
+	width: 50%;
+	float: right;
 }
 
 .check-list__items .check-list__item--map .map-info .place-name{
@@ -484,12 +490,16 @@ body{
 	color: #858585;
 }
 
+.check-list--lists .check-list__items .check-list__item{
+	padding-bottom: 2rem;
+}
+
 .check-list--lists .check-list__items .check-list__item:not(:first-child){
 	border-top: 1px solid #bdbdbd;
 	padding-top: 2rem;
 }
 
-.check-list--photos .video-image{
+.check-list--photos .video-image,.check-list--event .video-image{
 	width: 100%;
 	height: 100%;
 	background-position: 50% center;
@@ -498,12 +508,12 @@ body{
 	transition: all 1s ease;
 }
 
-.check-list--photos .video-image:hover:before{
+.check-list--photos .video-image:hover:before,.check-list--event .video-image:hover:before{
 	transition: all .5s;
 	background-color: rgba(0, 173, 255, .9);
 }
 
-.check-list--photos .video-image:before{
+.check-list--photos .video-image:before,.check-list--event .video-image:before{
 	content: '';
 	background-color: rgba(0, 173, 255, 0.8);
 	border-radius: 50%;
@@ -516,7 +526,7 @@ body{
 	height: 59px;
 }
 
-.check-list--photos .video-image:after{
+.check-list--photos .video-image:after,.check-list--event .video-image:after{
 	font-family: 'FontAwesome';
 	content: "\f04b";
 	top: 40%;
@@ -528,9 +538,18 @@ body{
 	font-size: 2rem;
 }
 
-.check-list--photos .check-list__items .check-list__item--inline{
+.check-list--photos .check-list__items .check-list__item p,.check-list--event .check-list__items .check-list__item p{
+	color: #494949;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 2.6rem;
+	margin-bottom: 1rem;
+}
+
+.check-list--photos .check-list__items .check-list__item--inline,.check-list--event .check-list__items .check-list__item--inline{
 	padding-right: .6rem;
-	width: auto;
+	max-width: 33%;
+	height: 14rem;
 	display: inline-block;
 	position: relative;
 	margin: 0 0 2rem 0;
@@ -539,12 +558,7 @@ body{
 .footer{
     padding: 2rem 0;
     background-color: #3c434a;
-    display: table;
     width: 100%;
-}
-
-.footer__copyright{
-	display: table-cell;
 }
 
 .footer__copyright p{
@@ -555,11 +569,7 @@ body{
 }
 
 .footer__menu{
-	display: table-cell;
-}
 
-.footer__socials{
-	display: table-cell;
 }
 
 .footer__socials i{
@@ -681,7 +691,116 @@ body{
 /* Small Devices, Tablets */
 
 @media only screen and (max-width: 768px) {
-
+    .check-list__items .priority{
+		top: 0;
+		right: 0;
+		position: absolute;
+	}
+    .check-list__items .check-list__item{
+		padding: .2rem 0;
+	}
+    .check-list__items .check-list__item p{
+		color: #494949;
+		font-size: 1.6rem;
+	}
+    .check-list__items .check-list__item--calendar{
+		padding: 2rem 0 0 0;
+		border-top: 1px solid #bdbdbd;
+	}
+    .check-list__items .check-list__item--calendar p {
+		color: #858585;
+		font-size: 1.4rem;
+		font-weight: 400;
+		margin-left: .8rem;
+		display: inline-block;
+	}
+    .check-list__items .check-list__item--calendar i{
+		font-size: 1.3rem;
+		color: #858585;
+	}
+    .check-list__items .check-list__item--map{
+		padding: 2rem 0;
+		border-top: 1px solid #bdbdbd;
+	}
+    .check-list__items .check-list__item--map .map-container{
+		width: 100%;
+		float: left;
+	}
+    .check-list__items .check-list__item--map .map-container img{
+		max-width: 100%;
+	}
+    .check-list__items .check-list__item--map .map-info{
+		width: 100%;
+		float: right;
+	}
+    .check-list__items .check-list__item--files{
+		padding: 2rem 0 0 0;
+		border-top: 1px solid #bdbdbd;
+	}
+    .check-list__items .check-list__item--files .file{
+		display: inline-block;
+		width: 100%;
+		margin: 0;
+	}
+    .check-list__items .check-list__item input[type="checkbox"]{
+		padding-left: .5rem;
+		cursor: pointer;
+		color: #fff;
+		width: 12px;
+		height: 12px;
+		visibility: hidden;
+	}
+    .check-list__items .check-list__item input[type="checkbox"]:after{
+		content: '';
+		border: 2px solid #b8b8b8;
+		border-radius: 2px;
+		background-color: #fff;
+		display: inline-block;
+		visibility: visible;
+		width: 100%;
+		height: 100%;
+	}
+    .check-list__items .check-list__item input[type="checkbox"]:checked:after{
+		background-color: #3b99fc;
+		border: 2px solid #3b99fc;
+		color: #fff;
+		font-size: 1.2rem;
+		font-family: FontAwesome;
+		content: "\f00c";
+		vertical-align: middle;
+		text-align: center;
+		padding: 0;
+	}
+    .check-list__items .check-list__item input[type="checkbox"]+span{
+		cursor: pointer;
+	}
+    .check-list__items .item-icon{
+		display: inline-block;
+		color: #a6aeb6;
+		font-size: 1.6rem;
+		text-align: left;
+	}
+    .check-list__items .item-icon_active{
+		color: #ed1e23;
+	}
+    .check-list__items .item-title{
+		display: inline-block;
+		margin-left: 1rem;
+		text-align: left;
+	}
+    .check-list__items .item-title p{
+		color: #333;
+		font-weight: 500;
+		font-size: 1.6rem;
+	}
+    .check-list__items .item-count, .check-list__items .item-date{
+		display: inline-block;
+		text-align: right;
+		float: right;
+	}
+    .check-list__items .item-count p,.check-list__items .item-date p{
+		color: #858585;
+	}
 }
 
 /* Extra Small Devices, Phones */

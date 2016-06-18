@@ -37,6 +37,7 @@ body{
         }
     }
     &__title{
+        text-align: center;
         a{
             color: $headerLinkAndButton;
             text-transform: uppercase;
@@ -75,6 +76,7 @@ body{
         display: inline-block;
         img {
             vertical-align: middle;
+            max-width: 80%;
         }
     }
     .user-name{
@@ -118,8 +120,7 @@ body{
     }
 }
 .btn{
-    padding: .8rem;
-
+    padding: .8rem 1.6rem;
     border-radius: 3px;
     border: none;
     cursor: pointer;
@@ -207,7 +208,7 @@ body{
         position: absolute 0 0 * *;
     }
     .check-list__item{
-        padding: .2rem 0;
+        padding: .4rem 0;
         p{
             color: #494949;
             font-size: 1.6rem;
@@ -287,8 +288,9 @@ body{
             padding-left: .5rem;
             cursor: pointer;
             color: #fff;
-            size: 12px;
+            size: 16px;
             visibility: hidden;
+            vertical-align: middle;
             &:after{
                  content: '';
                  border: 2px solid #b8b8b8;
@@ -337,6 +339,7 @@ body{
     display: inline-block;
     text-align: right;
     float: right;
+    width: 50%;
         p{
             color: #858585;
         }
@@ -413,28 +416,32 @@ body{
         }
     }
     &__menu{
+         text-align: center;
+            li{
+                display: inline-block;
+                &:not(:last-child){
+                    margin-right: 1rem;
+                }
+                a{
+                    color: #979ea4;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+            }
     }
     &__socials{
+     text-align: right;
         i{
             color: #979ea4;
             font-size: 2rem;
+            margin-left: 1rem;
         }
     }
 }
 .menu{
-    li{
-        display: inline-block;
-        &:not(:last-child){
-             margin-right: 1rem;
-         }
-            a{
-                color: #979ea4;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-size: 1.2rem;
-                font-weight: 500;
-            }
-    }
+
 }
 .download-banner{
     size: 100% *;
@@ -442,7 +449,6 @@ body{
     background-color: #37b7ec;
     &__logo{
          size: 33px;
-         vertical-align: middle;
     }
     &__title{
          text-align: left;
@@ -459,6 +465,7 @@ body{
     &__button{
         button{
          padding: .8rem 4rem;
+         width: 100%;
      }
     }
     &__close{
@@ -508,16 +515,23 @@ body{
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+    .header{
+        &__logo{
+            img{
+                max-width: 66%;
+            }
+        }
+    }
     .check-list__items{
-    .priority{
-        position: absolute 0 0 * *;
-    }
-    .check-list__item{
-        padding: .2rem 0;
-    p{
-        color: #494949;
-        font-size: 1.6rem;
-    }
+        .priority{
+            position: absolute 0 0 * *;
+        }
+        .check-list__item{
+            padding: .2rem 0;
+        p{
+            color: #494949;
+            font-size: 1.6rem;
+        }
 &--calendar{
      padding: 2rem 0 0 0;
      border-top: 1px solid #bdbdbd;
@@ -537,14 +551,14 @@ body{
      padding: 2rem 0;
      border-top: 1px solid #bdbdbd;
 .map-container{
-    width: 100%;
+    width: 50%;
     float: left;
 img{
-    max-width: 100%;
+    max-width: 90%;
 }
 }
 .map-info{
-    width: 100%;
+    width: 50%;
     float: right;
 }
 }
@@ -556,33 +570,6 @@ img{
     width: 100%;
     margin: 0;
     }
-}
-input[type="checkbox"]{
-    padding-left: .5rem;
-    cursor: pointer;
-    color: #fff;
-    size: 12px;
-    visibility: hidden;
-&:after{
-     content: '';
-     border: 2px solid #b8b8b8;
-     border-radius: 2px;
-     background-color: #fff;
-     display: inline-block;
-     visibility: visible;
-     size: 100%;
- }
-&:checked:after{
-     background-color: #3b99fc;
-     border: 2px solid #3b99fc;
-     color: #fff;
-     font-size: 1.2rem;
-     font-family: FontAwesome;
-     content: "\f00c";
-     vertical-align: middle;
-     text-align: center;
-     padding: 0;
- }
 }
 input[type="checkbox"]+span{
     cursor: pointer;
@@ -611,6 +598,7 @@ p{
     display: inline-block;
     text-align: right;
     float: right;
+
 p{
     color: #858585;
 }
@@ -620,7 +608,38 @@ p{
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-
+    .download-banner{
+        &__button{
+            button{
+                padding: .4rem 1rem;
+                width: 100%;
+            }
+        }
+    }
+    .header{
+        &__logo{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+.button-share{
+    button{
+        &:before{
+            content: "\f1e0  ";
+            font-family: 'FontAwesome';
+        }
+    }
+}
+.btn{
+    width: 100%;
+    padding: .7rem;
+    }
+}
+.timestamp{
+    .post-release{
+        margin-top: 2rem;
+    }
 }
 
 /* Custom, iPhone Retina */
